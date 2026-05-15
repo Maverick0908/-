@@ -460,6 +460,15 @@ function renderTeam(){
         <div><label class="caption">Роль в проекте</label><input class="field" data-team="${index}" data-field="role" type="text" value="${escapeHtml(member.role)}" placeholder="Аудит, смета, дизайн, HTML" /></div>
         <div><label class="caption">Зона ответственности</label><input class="field" data-team="${index}" data-field="duties" type="text" value="${escapeHtml(member.duties)}" placeholder="Что именно сделал участник" /></div>
       </div>
+       <div class="row-head">
+        <div class="row-title" data-dynamic-number="Участник">Участник ${index + 1}</div>
+        <button class="btn danger remove-btn" type="button" data-remove-team="${index}">Удалить</button>
+      </div>
+      <div class="mini-grid">
+        <div><label class="caption">ФИО</label><input class="field" data-team="${index}" data-field="name" type="text" value="${escapeHtml(member.name)}" placeholder="Фамилия Имя" /></div>
+        <div><label class="caption">Роль в проекте</label><input class="field" data-team="${index}" data-field="role" type="text" value="${escapeHtml(member.role)}" placeholder="Аудит, смета, дизайн, HTML" /></div>
+        <div><label class="caption">Зона ответственности</label><input class="field" data-team="${index}" data-field="duties" type="text" value="${escapeHtml(member.duties)}" placeholder="Что именно сделал участник" /></div>
+      </div>
       <div><label class="caption">Личный вывод участника</label><textarea class="small" data-team="${index}" data-field="conclusion" placeholder="Что участник понял о выбранном пространстве, закупке, эргономике или инфраструктуре.">${escapeHtml(member.conclusion)}</textarea></div>
     `;
     list.appendChild(row);
